@@ -1,17 +1,18 @@
 {
-  "name": "an-array-of-english-words",
-  "version": "1.2.0",
-  "description": "An array of ~275,000 English words. Works in node and browsers.",
-  "main": "words.json",
+  "name": "an-array-of-german-words",
+  "version": "1.0.0",
+  "description": "An array of ~168,000 German words. Works in node and browsers.",
+  "main": "woerter.json",
   "bin": {
-    "words": "./cli.js",
-    "an-array-of-english-words": "./cli.js"
+    "woerter": "./cli.js",
+    "an-array-of-german-words": "./cli.js"
   },
-  "repository": "https://github.com/zeke/an-array-of-english-words",
-  "author": "zeke",
+  "repository": "https://github.com/creativecouple/an-array-of-german-words",
+  "author": "CreativeCouple, zeke",
   "license": "MIT",
   "scripts": {
-    "build": "node build.js > words.json",
+    "create-corpus": "node crawl-wiktionary.js > corpus/wiktionary.txt && node fetch-atebits.js > corpus/de.txt",
+    "build": "node build.js > woerter.json",
     "test": "npm run build && mocha && standard"
   },
   "devDependencies": {

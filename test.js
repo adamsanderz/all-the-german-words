@@ -1,29 +1,33 @@
 const expect = require('chai').expect
-const words = require('.')
+const woerter = require('.')
 const they = it
 
-describe('words', () => {
+describe('woerter', () => {
   they('are in an array', () => {
-    expect(words).to.be.an('array')
+    expect(woerter).to.be.an('array')
   })
 
-  they('are over 274,000 in number', () => {
-    expect(words.length).to.be.above(274 * 1000)
+  they('are over 168,000 in number', () => {
+    expect(woerter.length).to.be.above(168 * 1000)
   })
 
   they('can have one letter', () => {
-    expect(words.filter(word => word.length === 1).length).to.be.above(4)
+    expect(woerter.filter(word => word.length === 1).length).to.be.above(4)
   })
 
   they('can have two letters', () => {
-    expect(words.filter(word => word.length === 2).length).to.be.above(50)
+    expect(woerter.filter(word => word.length === 2).length).to.be.above(50)
   })
 
-  they('are all lowercase', () => {
-    expect(words.every(word => word === word.toLowerCase())).to.equal(true)
+  they('can be lowercase', () => {
+    expect(woerter.filter(word => word === word.toLowerCase()).length).to.be.above(100)
+  })
+
+  they('can have uppercase', () => {
+    expect(woerter.filter(word => word !== word.toLowerCase()).length).to.be.above(100)
   })
 
   they('all have length', () => {
-    expect(words.every(word => word.length > 0)).to.equal(true)
+    expect(woerter.every(word => word.length > 0)).to.equal(true)
   })
 })
