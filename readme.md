@@ -5,7 +5,7 @@ list](https://github.com/atebits/Words).
 Provides normal case, lowercase and uppercase versions.
 Works with node and browserify.
 
-Try also the original [an-array-of-english-words](https://github.com/zeke/an-array-of-english-words) from [zeke](https://github.com/zeke/).
+Try also the original [an-array-of-english-words](http://npm.im/an-array-of-english-words) from [zeke](https://github.com/zeke/).
 
 ## Programmatic Usage
 
@@ -23,14 +23,6 @@ var quatschWoerter = woerter.filter(function(w) { return /quatsch/i.test(w) })
 console.log(quatschWoerter)
 ```
 
-Or for lower case spelling:
-
-```js
-var words = require("all-the-german-words").lowercase
-var cheeses = words.filter(function(w) { return /käse/.test(w) })
-console.log(cheeses)
-```
-
 ## Command Line Usage
 
 There's a CLI that prints all words to STDOUT. Install it globally:
@@ -45,8 +37,6 @@ Now you can print all words:
 woerter | grep Donaudampfschifffahrtsgesellschaft
 ```
 
-Or print them as lowercase:
+## See also
 
-```sh
-woerter -l | grep donaudampfschifffahrtsgesellschaft
-```
+The lowercase ascii version of this word list: [all-the-german-words-ascii](http://npm.im/all-the-german-words-ascii)
