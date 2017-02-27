@@ -1,11 +1,11 @@
 {
   "name": "all-the-german-words",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An array of ~168,000 German words. Offers both correct spelling and all lowercase. Works in node and browsers.",
   "main": "index.js",
   "bin": {
     "woerter": "./cli.js",
-    "an-array-of-german-words": "./cli.js"
+    "all-the-german-words": "./cli.js"
   },
   "repository": "https://github.com/creativecouple/all-the-german-words",
   "author": "CreativeCouple, zeke",
