@@ -1,6 +1,6 @@
 {
   "name": "all-the-german-words",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "An array of ~168,000 German words. Offers both correct spelling and all lowercase. Works in node and browsers.",
   "main": "index.js",
   "bin": {
@@ -12,7 +12,7 @@
   "license": "MIT",
   "scripts": {
     "create-corpus": "node crawl-wiktionary.js > corpus/wiktionary.txt && node fetch-atebits.js > corpus/de.txt",
-    "build": "node build.js > woerter.json && node build.js -l > lowercase.json && node build.js -u > uppercase.json",
+    "build": "node build.js > woerter.json && node build.js -l > lowercase.json",
     "test": "npm run build && mocha && standard"
   },
   "devDependencies": {

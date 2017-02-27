@@ -1,7 +1,9 @@
 # all-the-german-words
 
-An array of ~168,000 German words derived from [Wiktionary](https://de.wiktionary.org/) and [the Letterpress word
-list](https://github.com/atebits/Words). Works with node and browserify.
+An array of ~1,648,000 German words derived from [Wiktionary](https://de.wiktionary.org/) and [the Letterpress word
+list](https://github.com/atebits/Words).
+Provides normal case, lowercase and uppercase versions.
+Works with node and browserify.
 
 Try also the original [an-array-of-english-words](https://github.com/zeke/an-array-of-english-words) from [zeke](https://github.com/zeke/).
 
@@ -21,6 +23,14 @@ var quatschWoerter = woerter.filter(function(w) { return /quatsch/i.test(w) })
 console.log(quatschWoerter)
 ```
 
+Or for lower case spelling:
+
+```js
+var words = require("all-the-german-words").lowercase
+var cheeses = words.filter(function(w) { return /käse/.test(w) })
+console.log(cheeses)
+```
+
 ## Command Line Usage
 
 There's a CLI that prints all words to STDOUT. Install it globally:
@@ -35,9 +45,8 @@ Now you can print all words:
 woerter | grep Donaudampfschifffahrtsgesellschaft
 ```
 
-Or print them as lowercase or uppercase:
+Or print them as lowercase:
 
 ```sh
 woerter -l | grep donaudampfschifffahrtsgesellschaft
-woerter -u | grep DONAUDAMPFSCHIFFFAHRTSGESELLSCHAFT
 ```

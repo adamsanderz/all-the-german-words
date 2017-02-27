@@ -5,9 +5,7 @@ const chain = require('lodash').chain
 const basepath = path.join(__dirname, 'corpus')
 
 var words = []
-if (process.argv.indexOf('-u') > 0) {
-  words = require('./lowercase.json').map(word => word.toLocaleUpperCase('de'))
-} else if (process.argv.indexOf('-l') > 0) {
+if (process.argv.indexOf('-l') > 0) {
   words = _(require('./woerter.json').map(word => word.toLocaleLowerCase('de')))
         .compact()
         .uniq()
