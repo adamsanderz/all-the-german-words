@@ -1,18 +1,18 @@
 {
-  "name": "an-array-of-german-words",
+  "name": "all-the-german-words",
   "version": "1.0.0",
-  "description": "An array of ~168,000 German words. Works in node and browsers.",
-  "main": "woerter.json",
+  "description": "An array of ~168,000 German words. Offers both correct spelling and all lowercase. Works in node and browsers.",
+  "main": "index.js",
   "bin": {
     "woerter": "./cli.js",
     "an-array-of-german-words": "./cli.js"
   },
-  "repository": "https://github.com/creativecouple/an-array-of-german-words",
+  "repository": "https://github.com/creativecouple/all-the-german-words",
   "author": "CreativeCouple, zeke",
   "license": "MIT",
   "scripts": {
     "create-corpus": "node crawl-wiktionary.js > corpus/wiktionary.txt && node fetch-atebits.js > corpus/de.txt",
-    "build": "node build.js > woerter.json",
+    "build": "node build.js > woerter.json && node build.js -l > lowercase.json && node build.js -u > uppercase.json",
     "test": "npm run build && mocha && standard"
   },
   "devDependencies": {
